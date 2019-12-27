@@ -7,7 +7,8 @@ const product = new Schema({
   colors: {type: [{
     value:  {type: String, required: true},
     image: {type: String, required: true},
-    price: {type: Number, required: true}
+    price: {type: Number, required: true},
+    buy_link: {type: String, required: true},
   }], required: true} 
 });
 

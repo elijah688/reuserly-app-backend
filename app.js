@@ -4,6 +4,7 @@ const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 
 const productRoutes = require('./routes/product')
+const bookRoutes = require('./routes/book')
 
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
@@ -34,5 +35,6 @@ app.use((req, res, next) => {
 
 
 app.use('/api/products', productRoutes);
+app.use('/api/books', bookRoutes);
 
 module.exports = app;
