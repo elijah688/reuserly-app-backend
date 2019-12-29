@@ -3,7 +3,9 @@ const app = express();
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 
-const productRoutes = require('./routes/product')
+const strawRoutes = require('./routes/straw')
+const protectorRoutes = require('./routes/protector')
+const fluteRoutes = require('./routes/flute')
 const bookRoutes = require('./routes/book')
 
 mongoose.set('useNewUrlParser', true);
@@ -34,7 +36,9 @@ app.use((req, res, next) => {
 });
 
 
-app.use('/api/products', productRoutes);
+app.use('/api/straws', strawRoutes);
+app.use('/api/protectors', protectorRoutes);
+app.use('/api/flutes', fluteRoutes);
 app.use('/api/books', bookRoutes);
 
 module.exports = app;

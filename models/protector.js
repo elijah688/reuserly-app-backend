@@ -1,16 +1,16 @@
 const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
-const product = new Schema({
+const protector = new Schema({
   title:  {type: String, required: true},
   description: {type: [String], required: true},
-  colors: {type: [{
-    value:  {type: String, required: true},
+  sizes: {type: [{
+    size:  {type: String, required: true},
     image: {type: String, required: true},
     price: {type: Number, required: true},
     buy_link: {type: String, required: true},
   }], required: true} 
 });
 
-const Product = mongoose.model('Product', product);
-module.exports = Product; 
+const Protector = mongoose.model('Protector', protector);
+module.exports = Protector; 
