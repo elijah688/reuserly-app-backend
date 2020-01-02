@@ -2,10 +2,10 @@
   "name": "barny-backend",
   "version": "1.0.0",
   "description": "The backend for Barny's app",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:server": "nodemon"
+    "start:server": "nodemon ./server.js"
   },
   "author": "",
   "license": "ISC",
