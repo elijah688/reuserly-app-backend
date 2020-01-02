@@ -1,10 +1,25 @@
 const http = require('http');
-const app = require('./app')
+const app = require('./app.js');
 
-const port = (3000 || process.env.PORT)
+const normalizePort = val => {
+    var port = parseInt(val, 10);
+  
+        if (isNaN(port)) {
+          // named pipe
+            return val;
+      }
+  
+    if (port >= 0) {
+      // port number
+      return port;
+    }
+  
+    return false;
+  };
+
+const port = normalizePort(process.env.PORT || "3000");
+
 const server = http.createServer(app);
-
-
 server.listen(port, () => {
-    console.log(`Server started on port: ${port}`);
+  console.log(`Server running at http://${port}/`);
 });
