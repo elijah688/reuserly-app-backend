@@ -1,5 +1,5 @@
 const http = require('http');
-const app = require('../reuserly-app-backend/app.js')
+const app = require('./app')
 
 const port = (3000 || process.env.PORT)
 const server = http.createServer(app);
